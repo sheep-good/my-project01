@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>구구단/나눗셈 표</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system; margin: 24px; }
+     .card { max-width: 560px; margin: 0 auto; border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
+    /*label { display:block; margin-top: 12px; }*/
+    input, select, button { font-size: 16px; padding: 8px; margin-top: 6px; } /* 단입력 */
+    table { width:100%; border-collapse: collapse; margin-top:16px; }
+    th, td { border:1px solid #eee; padding:8px; text-align:left; }
+    th { background:#fafafa; }
+    .hint { color:#666; font-size: 13px;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>단 입력 → 결과 보기</h2>
+    <label>
+      단(정수):
+      <input id="dan" type="number" value="7" min="1" max="9" />
+    </label>
+    <label>
+      연산:
+      <select id="op">
+        <option value="mul">곱셈</option>
+        <option value="div">나눗셈</option>
+      </select>
+    </label>
+    <button id="btn">조회</button>
+    <p class="hint">예: 단=7, 연산=곱셈 → 7 x 1 ~ 7 x 9</p>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
